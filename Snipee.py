@@ -42,32 +42,8 @@ except ModuleNotFoundError:
 	install(requests)
 	pass
 print("Starting script...")
-
-
 print("Selamat datang di Aplikasi Snipee.")
-print("Mohon tunggu beberapa menit untuk verifikasi...")
-hwid = str(str(subprocess.check_output('wmic csproduct get uuid')).strip().replace(r"\r", "").split(r"\n")[1].strip())
-r = requests.get("https://pastebin.com/raw/XEixTw0H")
-
-def printSlow(text):
-    for char in text:
-        print(char, end="")
-        sys.stdout.flush()
-        time.sleep(.1)
-
-def Main_Program():
-    if hwid in r.text:
-        print("Lisensi Anda :", hwid)
-        printSlow("Akses diterima, selamat sniping!")
-        time.sleep(.1)
-    else:
-        print("Error : Anda belum diwhitelist di server kami.")
-        print("Join Group Telegram kalo mau diwhitelist yaa, Ini kode uniknya.")
-        print("Kirim ini ke DM >", hwid)
-        os.system('pause >NUL')
-
-if __name__ == "__main__":
-    Main_Program()
+print("Open source version, doesnt need authenticate.")
 
 dateTimeObj = datetime.datetime.now()
 timestampStr = dateTimeObj.strftime("%H:%M:%S")
@@ -99,7 +75,7 @@ banner = """
 """
 print(banner)
 print("Flashsale Sniper [Platform : Shopee Edition] Version 1.2")
-print("MOHON GUNAKAN PROXY RESIDENTIAL UTK BYPASS AUTHENTIKASI!.")
+print("OPEN SOURCE VERSION, DO NOT RESELL OR ILLEGALLY USE.")
 print("Proudly coded with <3 by Fallen (me). Telegram : @FallenV4")
 print("");
 print("Metode tersebut private, untuk mendapatkan Software Key. Harap hubungi");
@@ -110,7 +86,7 @@ password = input("Masukkan Password Shopee: ")
 os.system('cls' if os.name == 'nt' else 'clear')
 print(banner)
 print("Flashsale Sniper [Platform : Shopee Edition] Version 1.2")
-print("MOHON GUNAKAN PROXY RESIDENTIAL UTK BYPASS AUTHENTIKASI!.")
+print("OPEN SOURCE VERSION, DO NOT RESELL OR ILLEGALLY USE.")
 print("Proudly coded with <3 by Fallen (me). Telegram : @FallenV4")
 print("");
 print("Mohon masukkan metode pembayaran yang ingin dipakai")
