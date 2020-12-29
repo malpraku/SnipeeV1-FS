@@ -125,7 +125,7 @@ print("Awaiting for the time to manual prevent bot detection...");
 
 option = webdriver.ChromeOptions()
 option.add_experimental_option("excludeSwitches", ['enable-automation']);
-option.add_argument("--headless")
+#option.add_argument("--headless")
 browser = webdriver.Chrome(executable_path='chromedriver.exe', options=option)
 browser.get("https://shopee.co.id/buyer/login")
 try:
