@@ -1,5 +1,13 @@
 # Halo ngab, jangan skid skid yaa :/.
-
+from discord_webhook import DiscordWebhook
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC    
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import TimeoutException
+import requests
 from time import gmtime, strftime
 from random import randint
 import subprocess
@@ -9,37 +17,6 @@ import time
 import os
 import datetime
 
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-print("Mengecek beberapa module penting untuk program ini, harap tunggu.")
-try:
-    from discord_webhook import DiscordWebhook
-    print("[discord_webhook] found, searching others...")
-except ModuleNotFoundError:
-	print("[discord_webhook] not found, installing...")
-	install(discord_webhook)
-	pass
-try:
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC    
-    from selenium.common.exceptions import NoSuchElementException
-    from selenium.common.exceptions import WebDriverException
-    from selenium.common.exceptions import TimeoutException
-    print("[selenium] found, searching others...")
-except ModuleNotFoundError:
-	print("[selenium] not found, installing...")
-	install(selenium)
-	pass
-try:
-    import requests
-    print("[requests] found, searching others...")
-except ModuleNotFoundError:
-	print("[requests] not found, installing...")
-	install(requests)
-	pass
 print("Starting script...")
 print("Selamat datang di Aplikasi Snipee.")
 print("Open source version, doesnt need authenticate.")
@@ -55,8 +32,6 @@ def newtime():
 
 webhook = 0
 response = 0
-ctypes.windll.kernel32.SetConsoleTitleW("Snipee [Coded by Fallen#0021!]")
-
 
 # STARTUP EVENT
 
